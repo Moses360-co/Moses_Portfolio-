@@ -1,6 +1,7 @@
 /* =========================================================
    ABOUT SECTION
    iPHONE GLASSMORPHISM STYLE
+   LOCAL BACKGROUND IMAGE
 ========================================================= */
 .about-section {
   position: relative;
@@ -10,11 +11,24 @@
   align-items: center;
   padding: 110px 6%;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(238, 248, 249, 0.82), rgba(245, 249, 252, 0.62)), url("https://static.vecteezy.com/system/resources/previews/022/515/435/large_2x/ai-generative3d-texture-colorful-abstract-background-for-desktop-wallpaper-image-free-photo.jpg");
+  isolation: isolate;
+  background: linear-gradient(135deg, rgba(239, 248, 250, 0.78), rgba(246, 249, 252, 0.62)), url("../assets/about-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  isolation: isolate;
+  background-attachment: fixed;
+}
+
+/* =========================================================
+   BACKGROUND GLASS OVERLAY
+========================================================= */
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.3));
+  z-index: -3;
+  pointer-events: none;
 }
 
 /* =========================================================
@@ -25,7 +39,7 @@
   border-radius: 50%;
   pointer-events: none;
   filter: blur(12px);
-  z-index: -1;
+  z-index: -2;
 }
 
 .about-orb-one {
@@ -60,8 +74,8 @@
   gap: clamp(40px, 7vw, 90px);
   padding: clamp(30px, 5vw, 70px);
   border-radius: 48px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.25));
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.24));
+  border: 1px solid rgba(255, 255, 255, 0.88);
   box-shadow: 0 40px 110px rgba(30, 50, 70, 0.16), inset 0 1px 2px rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
@@ -483,6 +497,7 @@
 @media (max-width: 950px) {
   .about-section {
     padding: 85px 4%;
+    background-attachment: scroll;
   }
   .about {
     grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
@@ -501,6 +516,7 @@
   .about-section {
     min-height: auto;
     padding: 75px 18px;
+    background-attachment: scroll;
   }
   .about {
     grid-template-columns: 1fr;
@@ -530,6 +546,7 @@
 @media (max-width: 480px) {
   .about-section {
     padding: 60px 12px;
+    background-attachment: scroll;
   }
   .about {
     padding: 14px;

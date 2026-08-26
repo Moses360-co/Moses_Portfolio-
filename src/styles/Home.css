@@ -1,6 +1,8 @@
 /* =========================================================
    HOME SECTION
    iPHONE GLASSMORPHISM STYLE
+   LOCAL BACKGROUND IMAGE
+   RESPONSIVE
 ========================================================= */
 .home-section {
   position: relative;
@@ -12,10 +14,38 @@
   padding: 130px 6% 80px;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(135deg, rgba(239, 248, 250, 0.82), rgba(246, 249, 252, 0.65)), url("https://st5.depositphotos.com/2501519/64385/i/450/depositphotos_643859822-stock-photo-colorful-abstract-painting-black-background.jpg");
+  /* Local background image */
+  background: linear-gradient(135deg, rgba(239, 248, 250, 0.78), rgba(246, 249, 252, 0.72)), url("../assets/about-background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* =========================================================
+   BACKGROUND GLASS OVERLAY
+========================================================= */
+.home-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.22));
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: -3;
+  pointer-events: none;
+}
+
+/* =========================================================
+   BACKGROUND LIGHT EFFECT
+========================================================= */
+.home-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(20, 184, 166, 0.12), transparent 30%), radial-gradient(circle at 85% 70%, rgba(59, 130, 246, 0.09), transparent 30%);
+  z-index: -2;
+  pointer-events: none;
 }
 
 /* =========================================================
@@ -29,6 +59,9 @@
   z-index: -1;
 }
 
+/* =========================================================
+   ORB ONE
+========================================================= */
 .home-orb-one {
   width: 320px;
   height: 320px;
@@ -38,6 +71,9 @@
   animation: orbFloat 8s ease-in-out infinite;
 }
 
+/* =========================================================
+   ORB TWO
+========================================================= */
 .home-orb-two {
   width: 230px;
   height: 230px;
@@ -47,6 +83,9 @@
   animation: orbFloat 10s ease-in-out infinite reverse;
 }
 
+/* =========================================================
+   ORB THREE
+========================================================= */
 .home-orb-three {
   width: 150px;
   height: 150px;
@@ -68,8 +107,8 @@
   align-items: center;
   padding: clamp(25px, 5vw, 70px);
   border-radius: 50px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.24));
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.88);
   box-shadow: 0 40px 110px rgba(30, 50, 70, 0.16), inset 0 1px 2px rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(35px);
   -webkit-backdrop-filter: blur(35px);
@@ -77,6 +116,9 @@
   animation: homeAppear 1s ease both;
 }
 
+/* =========================================================
+   MAIN GLASS TOP REFLECTION
+========================================================= */
 .home::before {
   content: "";
   position: absolute;
@@ -84,9 +126,12 @@
   left: 8%;
   width: 84%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, white, transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent);
 }
 
+/* =========================================================
+   GLASS LIGHT
+========================================================= */
 .home::after {
   content: "";
   position: absolute;
@@ -111,17 +156,17 @@
   padding: clamp(25px, 4vw, 50px);
   border-radius: 40px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.18));
-  border: 1px solid rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.78);
   box-shadow: 0 25px 70px rgba(30, 50, 70, 0.09), inset 0 1px 2px rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   animation: contentAppear 1s ease 0.2s both;
-  transition: 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .home-content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 35px 90px rgba(30, 50, 70, 0.15), inset 0 1px 2px white;
+  box-shadow: 0 35px 90px rgba(30, 50, 70, 0.15), inset 0 1px 2px rgb(255, 255, 255);
 }
 
 /* =========================================================
@@ -141,8 +186,12 @@
   background: rgba(20, 184, 166, 0.08);
   border: 1px solid rgba(20, 184, 166, 0.16);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
+/* =========================================================
+   LABEL DOT
+========================================================= */
 .label-dot {
   width: 8px;
   height: 8px;
@@ -272,7 +321,7 @@
 }
 
 /* =========================================================
-   SOCIAL ICONS - SVG
+   SOCIAL ICONS
 ========================================================= */
 .home-sci {
   display: flex;
@@ -372,7 +421,7 @@
 }
 
 .primary-btn {
-  color: white;
+  color: #ffffff;
   background: linear-gradient(135deg, #0f766e, #14b8a6);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 12px 30px rgba(15, 118, 110, 0.22);
@@ -384,6 +433,7 @@
   border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow: 0 10px 25px rgba(30, 50, 70, 0.07);
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .btn-box svg {
@@ -425,6 +475,8 @@
   font-weight: 600;
   background: rgba(255, 255, 255, 0.42);
   border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .status-dot {
@@ -437,7 +489,7 @@
 }
 
 /* =========================================================
-   SCROLL
+   SCROLL INDICATOR
 ========================================================= */
 .scroll-indicator {
   position: absolute;
@@ -465,6 +517,7 @@
   border: 1px solid rgba(90, 110, 125, 0.35);
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .scroll-mouse::before {
@@ -563,6 +616,7 @@
 @media (max-width: 950px) {
   .home-section {
     padding: 120px 4% 70px;
+    background-attachment: scroll;
   }
   .home {
     min-height: 600px;
@@ -582,6 +636,7 @@
   .home-section {
     min-height: 100vh;
     padding: 105px 15px 65px;
+    background-attachment: scroll;
   }
   .home {
     min-height: auto;
@@ -652,6 +707,18 @@
   }
   .scroll-indicator {
     display: none;
+  }
+  .home-orb-one {
+    width: 220px;
+    height: 220px;
+  }
+  .home-orb-two {
+    width: 180px;
+    height: 180px;
+  }
+  .home-orb-three {
+    width: 120px;
+    height: 120px;
   }
 }
 /* =========================================================

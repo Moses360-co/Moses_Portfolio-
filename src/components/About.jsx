@@ -1,31 +1,37 @@
 import "../styles/About.scss";
+import aboutBackground from "../assets/about-background.jpg";
+import profileImage from "../assets/Profile.jpg";
 
 function About() {
   return (
-    <section className="about-section" id="about">
-
+    <section
+      className="about-section"
+      id="about"
+      style={{ "--about-bg": `url(${aboutBackground})` }}
+    >
       {/* Background Decorations */}
       <span className="about-orb about-orb-one"></span>
       <span className="about-orb about-orb-two"></span>
 
       <div className="about">
 
-        {/* Profile Image */}
+        {/* =========================
+            PROFILE IMAGE
+        ========================= */}
         <div className="about-img">
-
           <div className="image-glass">
 
             <div className="image-shine"></div>
 
             <img
-              src="/1710385525701.jpg"
+              src={profileImage}
               alt="Moses Raj - Web Developer and AI/ML Learner"
             />
 
             {/* Floating Profile Badge */}
             <div className="profile-badge">
               <span className="badge-icon">
-                <svg viewBox="0 0 24 24">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M20 7L10 17l-5-5" />
                 </svg>
               </span>
@@ -37,11 +43,12 @@ function About() {
             </div>
 
           </div>
-
         </div>
 
 
-        {/* About Content */}
+        {/* =========================
+            ABOUT CONTENT
+        ========================= */}
         <div className="about-content">
 
           {/* Label */}
@@ -64,7 +71,7 @@ function About() {
             <b>|</b>
             Python Full Stack Developer
             <b>|</b>
-            AI & ML Learner
+            AI &amp; ML Learner
           </h4>
 
 
@@ -89,7 +96,9 @@ function About() {
           </p>
 
 
-          {/* Skills */}
+          {/* =========================
+              SKILLS
+          ========================= */}
           <div className="about-skills">
 
             <span>
@@ -120,14 +129,16 @@ function About() {
           </div>
 
 
-          {/* Connect Button */}
+          {/* =========================
+              CONNECT BUTTON
+          ========================= */}
           <a
             href="#contact"
             className="about-btn"
           >
             <span>Let's Connect</span>
 
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 12h14" />
               <path d="m13 6 6 6-6 6" />
             </svg>
@@ -136,7 +147,6 @@ function About() {
         </div>
 
       </div>
-
     </section>
   );
 }

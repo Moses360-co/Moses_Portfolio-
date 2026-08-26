@@ -11,8 +11,10 @@ import "./styles/App.scss";
 function App() {
   return (
     <>
+      {/* Navigation */}
       <Navbar />
 
+      {/* Main Content */}
       <main>
         <Home />
         <About />
@@ -22,11 +24,15 @@ function App() {
         <Contact />
       </main>
 
+      {/* Footer */}
       <footer className="footer">
-        Developed by Moses © 2026
+        <span>Developed by</span>
+        <strong>Moses</strong>
+        <span>© 2026</span>
       </footer>
 
-      <a href="#home" className="top">
+      {/* Back To Top */}
+      <a href="#home" className="top" aria-label="Back to top">
         <i className="bx bx-up-arrow-alt"></i>
       </a>
     </>
