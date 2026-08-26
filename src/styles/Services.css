@@ -1,0 +1,438 @@
+/* =========================================================
+   SERVICES
+   iPHONE GLASSMORPHISM STYLE
+   ICONS WITHOUT EXTERNAL LIBRARY
+========================================================= */
+.services-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 6% 100px;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(135deg, rgba(239, 248, 250, 0.88), rgba(246, 249, 252, 0.72)), url("https://www.bing.com/images/search?view=detailV2&ccid=HwyTVJGg&id=08CC8339FD5F494FB1F7EA74C3DF7A8D5024971C&thid=OIP.HwyTVJGggy73_04G1JEGOAHaEO&mediaurl=https%3a%2f%2fstatic.vecteezy.com%2fsystem%2fresources%2fpreviews%2f021%2f171%2f699%2flarge_2x%2fcolorful-abstract-wallpaper-modern-background-ai-generated-photo.jpg&exph=1960&expw=3430&q=background+images&FORM=IRPRST&ck=018E93491A476C85F1CC2639AC928BFC&selectedIndex=0&itb=0");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* =========================================================
+   BACKGROUND GLASS
+========================================================= */
+.services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.42));
+  z-index: -3;
+  pointer-events: none;
+}
+
+/* =========================================================
+   FLOATING ORBS
+========================================================= */
+.services-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(12px);
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Orb One */
+.services-orb-one {
+  width: 300px;
+  height: 300px;
+  top: 8%;
+  left: -130px;
+  background: rgba(20, 184, 166, 0.13);
+  animation: servicesFloat 9s ease-in-out infinite;
+}
+
+/* Orb Two */
+.services-orb-two {
+  width: 230px;
+  height: 230px;
+  right: -70px;
+  top: 45%;
+  background: rgba(59, 130, 246, 0.09);
+  animation: servicesFloat 11s ease-in-out infinite reverse;
+}
+
+/* Orb Three */
+.services-orb-three {
+  width: 160px;
+  height: 160px;
+  left: 45%;
+  bottom: -70px;
+  background: rgba(20, 184, 166, 0.09);
+  animation: servicesFloat 8s ease-in-out infinite;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.services-header {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  padding: 35px;
+  text-align: center;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.28));
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 25px 70px rgba(31, 52, 73, 0.09), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  margin-bottom: 13px;
+  border-radius: 20px;
+  color: #0f766e;
+  background: rgba(20, 184, 166, 0.09);
+  border: 1px solid rgba(20, 184, 166, 0.16);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+.services-header .sub-title {
+  margin: 0;
+  color: #182b3a;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.services-header .sub-title span {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+.services-header p {
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: #617080;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+.services-list {
+  position: relative;
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+.service-card {
+  position: relative;
+  min-height: 310px;
+  padding: 25px;
+  overflow: hidden;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 55px rgba(31, 52, 73, 0.11), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  transform: translateY(0);
+  animation: serviceAppear 0.7s ease both;
+  animation-delay: calc(var(--card-index) * 0.08s);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+/* =========================================================
+   TOP REFLECTION
+========================================================= */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(255, 255, 255), transparent);
+}
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+.service-card:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.38));
+  box-shadow: 0 35px 80px rgba(31, 52, 73, 0.17), inset 0 1px 2px rgb(255, 255, 255);
+}
+
+/* =========================================================
+   SHINE
+========================================================= */
+.service-shine {
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.32), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  transition: left 0.8s ease;
+  z-index: 2;
+}
+
+.service-card:hover .service-shine {
+  left: 140%;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+.service-icon {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.38));
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 28px rgba(31, 52, 73, 0.09), inset 0 1px 1px rgb(255, 255, 255);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Icon itself */
+.service-icon span {
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  line-height: 1;
+  transition: transform 0.4s ease;
+}
+
+/* Icon hover */
+.service-card:hover .service-icon {
+  transform: translateY(-4px) rotate(-3deg);
+  box-shadow: 0 18px 35px rgba(15, 118, 110, 0.17);
+}
+
+.service-card:hover .service-icon span {
+  transform: scale(1.12) rotate(4deg);
+}
+
+/* =========================================================
+   SERVICE NUMBER
+========================================================= */
+.service-number {
+  position: absolute;
+  top: 24px;
+  right: 25px;
+  color: rgba(15, 118, 110, 0.24);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+.service-content {
+  position: relative;
+  z-index: 3;
+}
+
+.service-content h2 {
+  margin: 0 0 11px;
+  color: #1c3040;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.service-content p {
+  margin: 0;
+  color: #617080;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   LEARN MORE
+========================================================= */
+.service-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  color: #0f766e;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-icon {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.service-content a:hover {
+  color: #14b8a6;
+  transform: translateX(3px);
+}
+
+.service-content a:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+@media (max-width: 1100px) {
+  .services-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 850px) {
+  .services-section {
+    padding: 90px 4% 80px;
+    background-attachment: scroll;
+  }
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .service-card {
+    min-height: 290px;
+  }
+}
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 600px) {
+  .services-section {
+    padding: 80px 16px 70px;
+    background-attachment: scroll;
+  }
+  .services-header {
+    margin-bottom: 35px;
+    padding: 28px 20px;
+    border-radius: 27px;
+  }
+  .services-header .sub-title {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+  .services-header p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .service-card {
+    min-height: auto;
+    padding: 23px;
+    border-radius: 27px;
+  }
+  .service-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+  }
+  .service-icon span {
+    font-size: 28px;
+  }
+}
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 400px) {
+  .services-section {
+    padding: 70px 10px 60px;
+  }
+  .services-header {
+    padding: 25px 16px;
+    border-radius: 24px;
+  }
+  .services-header .sub-title {
+    font-size: 34px;
+  }
+  .services-header p {
+    font-size: 13px;
+  }
+  .service-card {
+    padding: 20px;
+    border-radius: 24px;
+  }
+  .service-content h2 {
+    font-size: 18px;
+  }
+  .service-content p {
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   ANIMATION
+========================================================= */
+@keyframes serviceAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes servicesFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-25px, 25px) scale(1.08);
+  }
+}
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .services-orb {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}/*# sourceMappingURL=Services.css.map */
