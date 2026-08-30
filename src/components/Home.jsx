@@ -1,4 +1,15 @@
+
 import "../styles/Home.scss";
+
+import {
+  FaPython,
+  FaReact,
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaGithub,
+  FaBrain,
+} from "react-icons/fa";
 
 function Home() {
   return (
@@ -42,38 +53,40 @@ function Home() {
             Web Developer and AI/ML learner building modern,
             responsive web applications and practical machine
             learning projects. Currently expanding my skills in
-            <strong> Deep Learning, Neural Networks, and Computer Vision.</strong>
+            <strong>
+              {" "}Deep Learning, Neural Networks, and Computer Vision.
+            </strong>
           </p>
 
           {/* Technology Icons */}
           <div className="home-tech-icons">
 
             <div className="tech-icon" title="Python">
-              <i className="bx bxl-python"></i>
+              <FaPython />
             </div>
 
             <div className="tech-icon" title="React">
-              <i className="bx bxl-react"></i>
+              <FaReact />
             </div>
 
             <div className="tech-icon" title="JavaScript">
-              <i className="bx bxl-javascript"></i>
+              <FaJs />
             </div>
 
             <div className="tech-icon" title="HTML5">
-              <i className="bx bxl-html5"></i>
+              <FaHtml5 />
             </div>
 
             <div className="tech-icon" title="CSS3">
-              <i className="bx bxl-css3"></i>
+              <FaCss3Alt />
             </div>
 
             <div className="tech-icon" title="GitHub">
-              <i className="bx bxl-github"></i>
+              <FaGithub />
             </div>
 
             <div className="tech-icon ai-icon" title="Artificial Intelligence">
-              <i className="bx bx-brain"></i>
+              <FaBrain />
             </div>
 
           </div>
@@ -83,14 +96,11 @@ function Home() {
 
             {/* Contact */}
             <a href="#contact" aria-label="Contact">
-
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="12" cy="8" r="4" />
                 <path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7" />
               </svg>
-
               <span>Contact</span>
-
             </a>
 
             {/* Email */}
@@ -98,14 +108,11 @@ function Home() {
               href="mailto:handersonmoses360@gmail.com"
               aria-label="Email"
             >
-
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path d="M3 7l9 6 9-6" />
               </svg>
-
               <span>Email</span>
-
             </a>
 
             {/* LinkedIn */}
@@ -115,20 +122,14 @@ function Home() {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="4" y="4" width="16" height="16" rx="2" />
                 <path d="M8 10v6" />
                 <path d="M8 7.5v.01" />
                 <path d="M12 16v-3.5a2.5 2.5 0 0 1 5 0V16" />
                 <path d="M12 10v6" />
               </svg>
-
               <span>LinkedIn</span>
-
             </a>
 
             {/* GitHub */}
@@ -138,17 +139,11 @@ function Home() {
               rel="noopener noreferrer"
               aria-label="GitHub"
             >
-
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M9 19c-4.5 1.5-5-2-7-2" />
                 <path d="M15 22v-3.5c0-1 .1-1.5-.5-2.5 3.3-.4 6.8-1.6 6.8-7A5.5 5.5 0 0 0 19.8 5c.2-.6.5-1.8-.1-3.8 0 0-1.2-.4-4 1.5a13.8 13.8 0 0 0-7.4 0C5.5.8 4.3 1.2 4.3 1.2c-.6 2-.3 3.2-.1 3.8A5.5 5.5 0 0 0 2.7 9c0 5.4 3.5 6.6 6.8 7-.5.5-.8 1.2-.8 2.5V22" />
               </svg>
-
               <span>GitHub</span>
-
             </a>
 
           </div>
@@ -166,7 +161,6 @@ function Home() {
                 <path d="M5 12h14" />
                 <path d="m13 6 6 6-6 6" />
               </svg>
-
             </a>
 
             <a
@@ -179,7 +173,6 @@ function Home() {
                 <path d="M4 4h16v16H4z" />
                 <path d="m4 5 8 7 8-7" />
               </svg>
-
             </a>
 
           </div>
@@ -208,3 +201,4 @@ function Home() {
 }
 
 export default Home;
+

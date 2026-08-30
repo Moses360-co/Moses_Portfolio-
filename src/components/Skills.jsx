@@ -165,6 +165,37 @@ const skills = [
       </svg>
     ),
   },
+  {
+  name: "Deep Learning",
+  value: "72%",
+  type: "deep-learning",
+  icon: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="6" cy="6" r="2" />
+      <circle cx="18" cy="6" r="2" />
+      <circle cx="6" cy="18" r="2" />
+      <circle cx="18" cy="18" r="2" />
+      <circle cx="12" cy="12" r="2" />
+
+      <path d="M7.5 7.5L10.5 10.5" />
+      <path d="M16.5 7.5L13.5 10.5" />
+      <path d="M7.5 16.5L10.5 13.5" />
+      <path d="M16.5 16.5L13.5 13.5" />
+    </svg>
+  ),
+},
+{
+  name: "TensorFlow",
+  value: "72%",
+  type: "tensorflow",
+  icon: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2L20 6.5V11L15.5 8.5V18L12 20L8.5 18V8.5L4 11V6.5L12 2Z" />
+      <path d="M12 20V11" />
+      <path d="M8.5 8.5L12 11L15.5 8.5" />
+    </svg>
+  ),
+},
 ];
 
 function Skills() {

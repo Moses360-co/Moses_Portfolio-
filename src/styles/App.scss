@@ -1,3 +1,4 @@
+
 /* =========================================================
    APP GLOBAL STYLE
    iPHONE GLASSMORPHISM PORTFOLIO
@@ -6,14 +7,20 @@
 .App {
   width: 100%;
   min-height: 100vh;
-
   text-align: center;
-
   background: #f4f8fa;
-
   overflow-x: hidden;
 }
 
+/* Prevent horizontal scrolling */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 /* =========================================================
    MAIN CONTENT
@@ -23,10 +30,8 @@ main {
   width: 100%;
   margin: 0;
   padding: 0;
-
   overflow-x: hidden;
 }
-
 
 /* =========================================================
    FOOTER
@@ -35,36 +40,27 @@ main {
 
 .footer {
   position: relative;
-
   width: 100%;
-
   min-height: 90px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 7px;
-
   box-sizing: border-box;
-
   padding: 25px 6%;
 
   color: #71808d;
-
   font-size: 12px;
-
   font-weight: 600;
-
   letter-spacing: 0.4px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(239, 248, 250, 0.92),
-      rgba(246, 249, 252, 0.88)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(239, 248, 250, 0.92),
+    rgba(246, 249, 252, 0.88)
+  );
 
   border-top: 1px solid rgba(255, 255, 255, 0.9);
 
@@ -76,10 +72,8 @@ main {
   -webkit-backdrop-filter: blur(30px);
 
   overflow: hidden;
-
   isolation: isolate;
 }
-
 
 /* =========================================================
    FOOTER TOP GLASS REFLECTION
@@ -89,22 +83,19 @@ main {
   content: "";
 
   position: absolute;
-
   top: 0;
   left: 10%;
 
   width: 80%;
   height: 1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 1),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 1),
+    transparent
+  );
 }
-
 
 /* =========================================================
    FOOTER SOFT LIGHT
@@ -128,13 +119,10 @@ main {
   filter: blur(35px);
 
   pointer-events: none;
-
   z-index: -1;
 
-  animation:
-    footerLightFloat 8s ease-in-out infinite;
+  animation: footerLightFloat 8s ease-in-out infinite;
 }
-
 
 /* =========================================================
    FOOTER TEXT
@@ -144,32 +132,29 @@ main {
   color: #71808d;
 
   font-size: 12px;
-
   font-weight: 600;
 }
-
 
 /* =========================================================
    FOOTER NAME
 ========================================================= */
 
 .footer strong {
+  display: inline-block;
+
   color: #0f766e;
 
   font-size: 13px;
-
   font-weight: 800;
 
-  background:
-    linear-gradient(
-      135deg,
-      #0f766e,
-      #14b8a6
-    );
+  background: linear-gradient(
+    135deg,
+    #0f766e,
+    #14b8a6
+  );
 
   -webkit-background-clip: text;
   background-clip: text;
-
   -webkit-text-fill-color: transparent;
 
   transition:
@@ -180,16 +165,13 @@ main {
 .footer strong:hover {
   transform: translateY(-2px);
 
-  filter:
-    drop-shadow(
-      0 5px 12px
-      rgba(20, 184, 166, 0.25)
-    );
+  filter: drop-shadow(
+    0 5px 12px rgba(20, 184, 166, 0.25)
+  );
 }
 
-
 /* =========================================================
-   TOP BUTTON
+   BACK TO TOP BUTTON
    iPHONE GLASSMORPHISM
 ========================================================= */
 
@@ -203,7 +185,6 @@ main {
   height: 48px;
 
   display: grid;
-
   place-items: center;
 
   color: #0f766e;
@@ -212,8 +193,7 @@ main {
 
   border-radius: 17px;
 
-  background:
-    rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.62);
 
   border: 1px solid rgba(255, 255, 255, 0.88);
 
@@ -226,6 +206,8 @@ main {
 
   z-index: 999;
 
+  cursor: pointer;
+
   transition:
     transform 0.35s ease,
     background 0.35s ease,
@@ -233,54 +215,63 @@ main {
     color 0.35s ease;
 }
 
-
 /* =========================================================
-   TOP BUTTON ICON
+   SVG BACK TO TOP ICON
 ========================================================= */
 
-.top i {
-  font-size: 22px;
+.top-icon {
+  width: 22px;
+  height: 22px;
+
+  display: block;
 
   transition:
-    transform 0.35s ease;
+    transform 0.35s ease,
+    filter 0.35s ease;
 }
-
 
 /* =========================================================
    TOP BUTTON HOVER
 ========================================================= */
 
 .top:hover {
-  color: white;
+  color: #ffffff;
 
-  background:
-    linear-gradient(
-      135deg,
-      #0f766e,
-      #14b8a6
-    );
+  background: linear-gradient(
+    135deg,
+    #0f766e,
+    #14b8a6
+  );
 
   transform:
     translateY(-6px)
     scale(1.05);
 
   box-shadow:
-    0 18px 40px
-    rgba(15, 118, 110, 0.25);
+    0 18px 40px rgba(15, 118, 110, 0.25);
 }
 
-.top:hover i {
-  transform:
-    translateY(-2px);
+.top:hover .top-icon {
+  transform: translateY(-2px);
+
+  filter: drop-shadow(
+    0 3px 5px rgba(0, 0, 0, 0.15)
+  );
 }
 
+/* =========================================================
+   TOP BUTTON ACTIVE / CLICK
+========================================================= */
+
+.top:active {
+  transform: scale(0.94);
+}
 
 /* =========================================================
    FOOTER ANIMATION
 ========================================================= */
 
 @keyframes footerLightFloat {
-
   0%,
   100% {
     transform:
@@ -295,21 +286,14 @@ main {
   }
 }
 
-
 /* =========================================================
-   TABLET
+   LARGE TABLET
 ========================================================= */
 
 @media (max-width: 950px) {
-
   .footer {
     min-height: 85px;
-
-    padding:
-      23px
-      4%;
-
-    font-size: 11px;
+    padding: 23px 4%;
   }
 
   .footer span {
@@ -329,21 +313,22 @@ main {
 
     border-radius: 16px;
   }
-}
 
+  .top-icon {
+    width: 21px;
+    height: 21px;
+  }
+}
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
 @media (max-width: 650px) {
-
   .footer {
     min-height: 80px;
 
-    padding:
-      22px
-      15px;
+    padding: 22px 15px;
 
     gap: 5px;
 
@@ -368,24 +353,21 @@ main {
     border-radius: 15px;
   }
 
-  .top i {
-    font-size: 20px;
+  .top-icon {
+    width: 20px;
+    height: 20px;
   }
 }
-
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 400px) {
-
   .footer {
     min-height: 70px;
 
-    padding:
-      20px
-      10px;
+    padding: 20px 10px;
 
     gap: 4px;
   }
@@ -408,28 +390,126 @@ main {
     border-radius: 13px;
   }
 
-  .top i {
-    font-size: 18px;
+  .top-icon {
+    width: 18px;
+    height: 18px;
   }
 }
 
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 320px) {
+  .footer {
+    padding-left: 8px;
+    padding-right: 8px;
+    gap: 3px;
+  }
+
+  .footer span {
+    font-size: 8px;
+  }
+
+  .footer strong {
+    font-size: 9px;
+  }
+
+  .top {
+    right: 10px;
+    bottom: 10px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 12px;
+  }
+
+  .top-icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .top:hover {
+    transform: none;
+    color: #0f766e;
+
+    background: rgba(255, 255, 255, 0.62);
+
+    box-shadow:
+      0 12px 30px rgba(30, 50, 70, 0.12),
+      inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  }
+
+  .top:hover .top-icon {
+    transform: none;
+    filter: none;
+  }
+
+  .top:active {
+    color: #ffffff;
+
+    background: linear-gradient(
+      135deg,
+      #0f766e,
+      #14b8a6
+    );
+
+    transform: scale(0.92);
+  }
+}
+
+/* =========================================================
+   SAFE AREA FOR MOBILE PHONES
+========================================================= */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .top {
+    bottom: calc(15px + env(safe-area-inset-bottom));
+  }
+
+  @media (max-width: 400px) {
+    .top {
+      bottom: calc(12px + env(safe-area-inset-bottom));
+    }
+  }
+}
 
 /* =========================================================
    ACCESSIBILITY
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+.top:focus-visible {
+  outline: 3px solid rgba(20, 184, 166, 0.35);
+  outline-offset: 4px;
+}
 
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
   .footer::after,
   .footer strong,
   .top,
-  .top i {
+  .top-icon {
     animation: none !important;
+    transition: none !important;
   }
 
   *,
   *::before,
   *::after {
+    scroll-behavior: auto !important;
     transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
+

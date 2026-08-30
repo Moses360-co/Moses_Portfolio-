@@ -1,8 +1,15 @@
 import "../styles/Projects.scss";
+import CarDekho from "../assets/CarDhakoproject.png";
+import Deeplearig from "../assets/DeepNN.png";
+import Googleshop from "../assets/GoolgleShop.png";
+import Shopkart from "../assets/ShopKart.png";
+import Brezora from "../assets/Brezora.png";
+import Mahimai from "../assets/Mahimaicabsproject.png";
+import Angel from "../assets/Angels.png";
 
 const projects = [
   {
-    image: "/4635743.jpg",
+    image: CarDekho,
     title: "CarDekho Price Prediction",
     category: "Machine Learning",
     text:
@@ -10,7 +17,7 @@ const projects = [
     link: "https://github.com/Moses360-co/cardho",
   },
   {
-    image: "/4635741.png",
+    image: Deeplearig,
     title: "Deep Learning & Neural Networks",
     category: "Deep Learning",
     text:
@@ -18,7 +25,7 @@ const projects = [
     link: "#contact",
   },
   {
-    image: "/4635743.jpg",
+    image: Googleshop,
     title: "Python Django E-commerce",
     category: "Python / Django",
     text:
@@ -26,7 +33,7 @@ const projects = [
     link: "#contact",
   },
   {
-    image: "/4635741.png",
+    image: Shopkart,
     title: "React & Django E-commerce",
     category: "Full Stack",
     text:
@@ -34,11 +41,27 @@ const projects = [
     link: "#contact",
   },
   {
-    image: "/4635749.jpg",
-    title: "JavaScript E-commerce",
+    image: Brezora,
+    title: "Brezora-Online Room Booking",
     category: "Web Development",
     text:
-      "Responsive perfume e-commerce website using JavaScript, HTML and CSS.",
+      "Responsive room booking website using React and SCSS.",
+    link: "#contact",
+  },
+  {
+    image: Mahimai,
+    title: "Mahimai Cabs-Online Travel Booking",
+    category: "Web Development",
+    text:
+      "Responsive Travel booking website using React and SCSS.",
+    link: "#contact",
+  },
+  {
+    image: Angel,
+    title: "Anglels Bulders",
+    category: "Web Development",
+    text:
+      "Responsive Contraction website using React and SCSS.",
     link: "#contact",
   },
 ];
