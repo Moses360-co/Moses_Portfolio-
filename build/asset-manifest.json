@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.aea6b20f.css",
-    "main.js": "/static/js/main.b496c2a9.js",
+    "main.css": "/static/css/main.ad2eb3c3.css",
+    "main.js": "/static/js/main.eee25bc5.js",
+    "static/media/DeepNN.png": "/static/media/DeepNN.784b92c02b5cc15be706.png",
+    "static/media/Brezora.png": "/static/media/Brezora.a5bf728654fa2454f8e3.png",
+    "static/media/Mahimaicabsproject.png": "/static/media/Mahimaicabsproject.f0b0684827819828e672.png",
+    "static/media/CarDhakoproject.png": "/static/media/CarDhakoproject.5951ac10bc1675670b13.png",
+    "static/media/GoolgleShop.png": "/static/media/GoolgleShop.2bfd8e638049340848ca.png",
+    "static/media/ShopKart.png": "/static/media/ShopKart.cb8e82878688146ef7fb.png",
+    "static/media/about-background.jpg": "/static/media/about-background.01bf70617e1789cf2225.jpg",
+    "static/media/Profile.jpg": "/static/media/Profile.f29c8e7ef6c4006e9e86.jpg",
+    "static/media/Angels.png": "/static/media/Angels.b4d6442ed04ba36c1297.png",
     "index.html": "/index.html",
-    "main.aea6b20f.css.map": "/static/css/main.aea6b20f.css.map",
-    "main.b496c2a9.js.map": "/static/js/main.b496c2a9.js.map"
+    "main.ad2eb3c3.css.map": "/static/css/main.ad2eb3c3.css.map",
+    "main.eee25bc5.js.map": "/static/js/main.eee25bc5.js.map"
   },
   "entrypoints": [
-    "static/css/main.aea6b20f.css",
-    "static/js/main.b496c2a9.js"
+    "static/css/main.ad2eb3c3.css",
+    "static/js/main.eee25bc5.js"
   ]
 }
