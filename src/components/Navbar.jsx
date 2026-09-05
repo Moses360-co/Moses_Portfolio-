@@ -1,18 +1,19 @@
+
 import { useEffect, useState } from "react";
 import "../styles/Navbar.scss";
+
+const links = [
+  ["home", "Home"],
+  ["about", "About Me"],
+  ["services", "Services"],
+  ["skills", "Skills"],
+  ["projects", "Projects"],
+  ["contact", "Contact"],
+];
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
-
-  const links = [
-    ["home", "Home"],
-    ["about", "About Me"],
-    ["services", "Services"],
-    ["skills", "Skills"],
-    ["projects", "Projects"],
-    ["contact", "Contact"],
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +53,6 @@ function Navbar() {
       {/* =================================================
           LOGO
       ================================================= */}
-
       <a
         href="#home"
         className="logo"
@@ -64,16 +64,13 @@ function Navbar() {
         <strong>Moses Raj</strong>
       </a>
 
-
       {/* =================================================
           NAVIGATION
       ================================================= */}
-
       <nav
         className={`navbar ${menuOpen ? "open" : ""}`}
         aria-label="Main navigation"
       >
-
         {links.map(([id, name]) => (
           <a
             key={id}
@@ -84,14 +81,11 @@ function Navbar() {
             <span>{name}</span>
           </a>
         ))}
-
       </nav>
-
 
       {/* =================================================
           MOBILE MENU BUTTON
       ================================================= */}
-
       <button
         type="button"
         className={`menu-btn ${menuOpen ? "open" : ""}`}
@@ -103,26 +97,20 @@ function Navbar() {
         }
         aria-expanded={menuOpen}
       >
-
         {menuOpen ? (
-
           /* Close SVG */
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M6 6l12 12" />
             <path d="M18 6L6 18" />
           </svg>
-
         ) : (
-
           /* Menu SVG */
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 7h16" />
             <path d="M4 12h16" />
             <path d="M4 17h16" />
           </svg>
-
         )}
-
       </button>
 
     </header>
@@ -130,3 +118,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
